@@ -2,15 +2,12 @@ package ru.omega.soap;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 
-@WebService
+@WebService(targetNamespace = "http://imc.parus-s.ru", name = "RecordService")
+@SOAPBinding(parameterStyle = SOAPBinding.ParameterStyle.BARE)
 public interface RecordService {
-    @WebMethod
-    String getRecordByCode(String code);
 
     @WebMethod
-    String getRecordByName(String name, String title);
-
-    @WebMethod
-    String getRecordById(String id);
+    RecordResponse getRecordsInfo(RecordRequest request);
 }
