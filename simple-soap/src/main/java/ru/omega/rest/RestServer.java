@@ -9,7 +9,7 @@ import java.net.URI;
 
 public class RestServer {
 
-    public static final String BASE_URI = "http://0.0.0.0:8888/";
+    public static final String BASE_URI = "http://0.0.0.0:8888/soap";
 
     public static HttpServer startServer() {
         final ResourceConfig rc = new ResourceConfig().packages("ru.omega.rest");
